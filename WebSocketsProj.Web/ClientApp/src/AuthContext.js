@@ -16,8 +16,9 @@ const AuthContextComponent = ({ children }) => {
 
     const logout = () => setUser(null);
 
-    return ( <AuthContext.Provider value = {
-            { user, logout, setUser } } > { children } </AuthContext.Provider>
+    return (<AuthContext.Provider value={{ user, logout, setUser }}>
+        {children}
+    </AuthContext.Provider>
     )
 }
 const useAuthContext = () => useContext(AuthContext);

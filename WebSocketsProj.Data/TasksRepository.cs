@@ -38,7 +38,7 @@ namespace WebSocketsProj.Data
         public void SetCompleted(int taskId)
         {
             using var context = new TaskItemsContext(_connectionString);
-            context.Database.ExecuteSqlInterpolated($"UPDATE TaskItem SET IsCompleted = 1 WHERE Id = {taskId}");
+            context.Database.ExecuteSqlInterpolated($"UPDATE TaskItems SET IsCompleted = 1 WHERE Id = {taskId}");
         }
 
         public TaskItem GetById(int id)

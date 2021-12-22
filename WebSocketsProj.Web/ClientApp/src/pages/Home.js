@@ -10,7 +10,7 @@ const Home = () => {
     const connection = connectionRef.current;
 
     useEffect(() => {
-        const connectionHub = async () => {
+        const connectHub = async () => {
             const connection = new HubConnectionBuilder()
             .withUrl("/tasksHub").build();
 
@@ -22,11 +22,11 @@ const Home = () => {
             connectionRef.current = connection;
         }
 
-        connectionHub();
+        connectHub();
     },[]);
 
     const onTaskSubmit = async () => {
-        await connection.invoke("newTask", taskText);
+        await connection.invoke("NewTask", taskText);
         setTaskText('');
     }
 

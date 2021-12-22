@@ -27,7 +27,7 @@ const Signup = () => {
         <div className='row'>
             <div className="col-md-6 offset-md-3 card card-body bg-light">
                 <h3>Sign up for a new account</h3>
-                <form onFormSubmit={onFormSubmit}>
+                <form onSubmit={onFormSubmit}>
                     <input onChange={onTextChange} value={formData.firstName} type='text' name='firstName' placeholder='First Name' className='form-control'/>
                     <br/>
                     <input onChange={onTextChange} value={formData.lastName} type='text' name='lastName' placeholder='Last Name' className='form-control'/>

@@ -52,11 +52,10 @@ namespace WebSocketsProj.Web
             taskrepo.SetDoing(taskId, user.Id);
             SendTasks();
         }
-
         public void SetDone(int taskId)
         {
-            var taskrepo = new TasksRepository(_connectionString);
-            taskrepo.SetCompleted(taskId);
+            var taskRepo = new TasksRepository(_connectionString);
+            taskRepo.SetCompleted(taskId);
             SendTasks();
         }
     }
